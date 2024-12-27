@@ -4,12 +4,10 @@ Name: Your Name
 
 ## Features.
 
-A bullet-point list of the ADDITIONAL features you have implemented in the API **THAT WERE NOT IN THE LABS** (or modifications to existing features)
+A bullet-point list of the ADDITIONAL features I have implemented
  
- + Feature 1 
- + Feature 2 
- + Feature 3 
- + etc
+ + Fetch popular movies from TMDB
+ + Fetch top-rated movies from TMDB
 
 ## Setup requirements.
 
@@ -17,28 +15,23 @@ A bullet-point list of the ADDITIONAL features you have implemented in the API *
 
 ## API Configuration
 
-Describe any configuration that needs to take place before running the API. For example, creating an `.env` file and what variables to put in it. Give an example of how this might be done.
-
-REMEMBER: DON'T PUT YOUR OWN USERNAMES/PASSWORDS/AUTH KEYS IN THE README OR ON GITHUB, just placeholders as indicated below:
-
-______________________
+1. Clone the repository.
+2. Navigate to the `movies-api` directory and run `npm install` to install backend dependencies.
+3. Navigate to the `react-movies` directory and run `npm install` to install frontend dependencies.
+__________
 NODEENV=development
 PORT=8080
-HOST=
+HOST=localhost
 mongoDB=YourMongoURL
 seedDb=true
 secret=YourJWTSecret
+Create a .env file in the react-movies directory with the following content:
+TMDB_KEY=[TMDBApiKey]
 ______________________
 
 ## API Design
-Give an overview of your web API design, perhaps similar to the following: 
-
-- /api/movies | GET | Gets a list of movies 
-- /api/movies/{movieid} | GET | Gets a single movie 
-- /api/movies/{movieid}/reviews | GET | Get all reviews for movie 
-- /api/movies/{movieid}/reviews | POST | Create a new review for Movie 
-
-If you have your API design on an online platform or graphic, please link to it (e.g. [Swaggerhub](https://app.swaggerhub.com/)).
+/api/movies/tmdb/popular | GET | Fetch popular movies from TMDB
+/api/movies/tmdb/top-rated | GET | Fetch top-rated movies from TMDB
 
 ## Security and Authentication
 
